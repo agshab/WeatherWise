@@ -12,7 +12,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     min-height: 100vh;
+    padding: 0 10px;
     transition: background 0.3s ease;
 }
 
@@ -43,14 +45,60 @@ header h1 {
 }
 
 .weather-display {
-    width: 90%;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
     max-width: 400px;
-    margin: 20px 0;
+    text-align: center;
 }
 
-.weather-box {
+.weather-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.weather-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.temperature {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.weather-details {
+    margin-top: 15px;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.city-country, .day-time {
+    position: absolute;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.city-country {
+    font-weight: bold;
+    left: 0;
+    top: 0;
+}
+
+.day-time {
+    right: 0;
+    top: 0;
+}
+
+#weather-box {
     width: 100%;
-    height: 200px;
+    height: 250px;
     background-size: cover;
     background-position: center;
     border-radius: 12px;
@@ -59,7 +107,9 @@ header h1 {
 
 .weather-details {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 400px;
     margin-bottom: 20px;
 }
 
@@ -67,6 +117,22 @@ header h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 16px;
+    padding: 15px;
+    border: 2px solid #ddd;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: white;
+    width: 30%;
+    text-align: center;
+}
+
+.weather-details .detail-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.weather-details .detail-item p {
     font-size: 16px;
 }
 
@@ -136,4 +202,54 @@ header h1 {
     .search-bar input {
         width: 60%;
     }
+}
+
+.landing-page {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.landing-page h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.landing-page p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+}
+
+.icon-item {
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.icon-item i {
+    font-size: 45px;
+    color: #00eaff;
+}
+
+.icon-item p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.icon-item:hover {
+    transform: scale(1.1);
 }
