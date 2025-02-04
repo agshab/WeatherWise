@@ -62,6 +62,7 @@ header h1 {
     justify-content: space-around;
     margin-bottom: 20px;
 }
+
 .weather-details .detail-item {
     display: flex;
     flex-direction: column;
@@ -77,13 +78,62 @@ header h1 {
     background: #f9f9f9;
     border-radius: 6px;
 }
+
 .info-header .city-name {
     font-size: 24px;
     font-weight: bold;
     padding-left: 10px;
 }
+
 .info-header .date-time {
     font-size: 14px;
     padding-right: 10px;
 }
 
+.search-bar {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    padding: 20px 0;
+}
+
+.search-bar input {
+    padding: 12px;
+    width: 70%;
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    border-radius: 6px;
+    font-size: 16px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.search-bar button {
+    padding: 12px 25px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 600px) {
+    .info-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .info-header .date-time {
+        margin-top: 5px;
+    }
+    .search-bar input {
+        width: 60%;
+    }
+}
