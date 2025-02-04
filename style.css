@@ -30,3 +30,60 @@ header h1 {
     font-weight: bold;
     color: #000;
 }
+
+.weather-display, 
+#weather-info, 
+.search-bar {
+    border: 2px solid #ddd;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    margin: 15px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.weather-display {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px 0;
+}
+
+.weather-box {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    margin: 15px 0;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.weather-details .detail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+}
+
+.info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    background: #f9f9f9;
+    border-radius: 6px;
+}
+.info-header .city-name {
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+.info-header .date-time {
+    font-size: 14px;
+    padding-right: 10px;
+}
+

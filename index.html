@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App</title>
+    <title>WeatherWise</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="favicon.ico" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -11,9 +11,31 @@
   <body>
     <header>
       <div class="brand-logo">
-        <h1>Weather App</h1>
+        <h1>Weather Wise Forecast</h1>
       </div>
     </header>
+    <div id="weather-display" class="weather-display">
+      <div class="info-header">
+        <div class="city-name">
+          <span id="display-city" class="bold">City Name</span>
+        </div>
+        <div class="date-time">
+          <span id="display-date-time">Day, Date, Time</span>
+        </div>
+      </div>
+
+      <div id="weather-box" class="weather-box"></div>
+    </div>
+
+    <div id="weather-info" class="card-image"></div>
+
+    <div class="search-bar">
+      <div class="city-container">
+        <input type="text" id="city-input" placeholder="Enter city" />
+        <i class="fas fa-map-marker-alt"></i>
+      </div>
+      <button id="get-weather">Get Weather</button>
+    </div>
 
     <script src="script.js"></script>
   </body>
