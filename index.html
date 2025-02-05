@@ -10,7 +10,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </head>
   <body>
     <header>
@@ -18,34 +18,6 @@
         <h1>Weather Wise Forecast</h1>
       </div>
     </header>
-
-    <!-- Landing Page Section -->
-    <section id="landing-page" class="landing-page">
-      <h2>Welcome to Weather Wise Forecast</h2>
-      <p>
-        Get the latest weather updates for any city. Just enter a city name
-        below!
-      </p>
-
-      <div class="icons">
-        <div class="icon-item">
-          <i class="fas fa-sun"></i>
-          <p>Sunny</p>
-        </div>
-        <div class="icon-item">
-          <i class="fas fa-cloud"></i>
-          <p>Cloudy</p>
-        </div>
-        <div class="icon-item">
-          <i class="fas fa-cloud-showers-heavy"></i>
-          <p>Rainy</p>
-        </div>
-        <div class="icon-item">
-          <i class="fas fa-snowflake"></i>
-          <p>Snowy</p>
-        </div>
-      </div>
-    </section>
 
     <div id="weather-display" class="weather-display">
       <div class="info-header">
@@ -58,6 +30,12 @@
       </div>
 
       <div id="weather-box" class="weather-box">
+        <img
+          id="weather-background"
+          class="weather-background"
+          src="default.jpg"
+          alt="Weather Background"
+        />
         <div class="weather-main">
           <img
             id="weather-icon"
@@ -65,35 +43,32 @@
             src=""
             alt="Weather Icon"
           />
-          <span id="temperature" class="temperature">--°C</span>
+          <span id="temperature" class="temperature">--°F</span>
         </div>
       </div>
 
-      <div id="weather-details" class="weather-details">
-        <p>Humidity: <span id="humidity">--%</span></p>
-        <p>Condition: <span id="condition">--</span></p>
-        <p>Wind Speed: <span id="wind-speed">-- km/h</span></p>
-        <p>Chance of Rain: <span id="rain-chance">--%</span></p>
+      <div class="toggle-container">
+        <button id="toggle-temp" class="toggle-btn">°C | °F</button>
       </div>
     </div>
 
-    <!-- Weather Detail  Section -->
+    <!-- Weather Detail Section -->
     <div id="weather-details" class="weather-details">
-      <div class="detail-item" id="temperature-box">
-        <h3>Temperature</h3>
-        <p id="temperature"></p>
-      </div>
-      <div class="detail-item" id="humidity-box">
+      <div class="detail-item">
         <h3>Humidity</h3>
-        <p id="humidity"></p>
+        <p id="humidity-display">--%</p>
       </div>
-      <div class="detail-item" id="wind-box">
+      <div class="detail-item">
+        <h3>Condition</h3>
+        <p id="condition-display">--</p>
+      </div>
+      <div class="detail-item">
         <h3>Wind</h3>
-        <p id="wind-box"></p>
+        <p id="wind-speed-display">-- km/h</p>
       </div>
-      <div class="detail-item" id="chanceofrain-box">
+      <div class="detail-item">
         <h3>Chance of Rain</h3>
-        <p id="chanceofrain-box"></p>
+        <p id="rain-chance-display">--%</p>
       </div>
     </div>
 
